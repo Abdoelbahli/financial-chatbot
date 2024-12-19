@@ -56,13 +56,14 @@ Once the financial data is cleaned, the next step is to **calculate additional f
 2. **Net Income Change (%)**:  
    \
    Net Income Change = (Current Year Net Income−Previous Year Net Income) / Previous Year Net Income × 100
-  \
-3. **Assets Growth (%)**:  
+   \
+    
+4. **Assets Growth (%)**:  
    \
    Assets Growth = (Current Year Assets−Previous Year Assets) / Previous Year Assets × 100
    \
 
-4. **Liabilities Change (%)**:
+5. **Liabilities Change (%)**:
    \
    Liabilities Change = (Current Year Liabilities−Previous Year Liabilities) / Previous Year Liabilities × 100 
    \

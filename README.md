@@ -49,24 +49,26 @@ Once the financial data is cleaned, the next step is to **calculate additional f
 
 ### 📊 **Key Metrics Calculated**
 1. **Revenue Growth (%)**:
-   \
-   Revenue Growth = (Current Year Revenue−Previous Year Revenue) / Previous Year Revenue × 100
-   \
    
-2. **Net Income Change (%)**:  
-   \
-   Net Income Change = (Current Year Net Income−Previous Year Net Income) / Previous Year Net Income × 100
-   \
-    
-4. **Assets Growth (%)**:  
-   \
-   Assets Growth = (Current Year Assets−Previous Year Assets) / Previous Year Assets × 100
-   \
+   Revenue Growth = (Current Year Revenue−Previous Year Revenue) / Previous Year Revenue × 100
 
-5. **Liabilities Change (%)**:
-   \
+   
+2. **Net Income Change (%)**:
+   
+   Net Income Change = (Current Year Net Income−Previous Year Net Income) / Previous Year Net Income × 100
+
+    
+3. **Assets Growth (%)**:  
+   
+   Assets Growth = (Current Year Assets−Previous Year Assets) / Previous Year Assets × 100
+
+   
+
+4. **Liabilities Change (%)**:
+   
    Liabilities Change = (Current Year Liabilities−Previous Year Liabilities) / Previous Year Liabilities × 100 
-   \
+
+   
 
 ---
 

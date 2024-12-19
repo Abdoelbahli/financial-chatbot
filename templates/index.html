@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Analysis Chatbot</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="chatbot-container">
+    <h1>Financial Analysis Chatbot</h1>
+
+    <!-- Chat display -->
+    <div class="chat-window" id="chat-window">
+        <!-- Messages will be dynamically inserted here -->
+    </div>
+
+    <!-- Input form -->
+    <div class="input-container">
+        <!-- Company Selection Dropdown -->
+        <select id="company-select">
+            <option value="Apple">Apple</option>
+            <option value="Microsoft">Microsoft</option>
+            <option value="Tesla">Tesla</option>
+        </select>
+
+        <!-- User input and send button -->
+        <input type="text" id="user-input" placeholder="Ask me about financial metrics..." autocomplete="off">
+        <button id="send-button">Send</button>
+    </div>
+</div>
+
+<script>
+    // Front-end JavaScript for sending and receiving messages
+    const sendButton = document.getElementById('send-button');
+    const userInput = document.getElementById('user-input');
+    const chatWindow = document.getElementById('chat-window');
+    const companySelect = document.getElementById('company-select');
+
+    sendButton.addEventListener('click', sendMessage);
+    userInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') sendMessage();
+    });
+
+    function sendMessage() {
+        const message = userInput.value.trim();
+        const companyName = companySelect.value; // Get selected company name
+
+        if (!message) return;
+
+        // Display user's message in the chat window
+        displayMessage('user', message);
+        userInput.value = '';
+        
+        // Send the message to the Flask backend
+        fetch('/chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 
+                message: message, 
+                company_name: companyName 
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            displayMessage('bot', data.response);
+        })
+        .catch(error => {
+            displayMessage('bot', 'An error occurred, please try again.');
+        });
+    }
+
+    function displayMessage(sender, message) {
+        const messageBubble = document.createElement('div');
+        messageBubble.classList.add('message', sender);
+        messageBubble.textContent = message;
+        chatWindow.appendChild(messageBubble);
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+    }
+</script>
+
+</body>
+</html>

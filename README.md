@@ -48,25 +48,24 @@ The first step was to gather raw financial data for **Apple**, **Microsoft**, an
 Once the financial data is cleaned, the next step is to **calculate additional financial metrics**. Key metrics include:
 
 ### 📊 **Key Metrics Calculated**
-1. **Revenue Growth (%)**:  
-   \[
-   \text{Revenue Growth} = \frac{(\text{Current Year Revenue} - \text{Previous Year Revenue})}{\text{Previous Year Revenue}} \times 100
-   \]
-
+1. **Revenue Growth (%)**:
+   \
+   Revenue Growth = (Current Year Revenue−Previous Year Revenue) / Previous Year Revenue × 100
+   \
+   
 2. **Net Income Change (%)**:  
-   \[
-   \text{Net Income Change} = \frac{(\text{Current Year Net Income} - \text{Previous Year Net Income})}{\text{Previous Year Net Income}} \times 100
-   \]
-
+   \
+   Net Income Change = (Current Year Net Income−Previous Year Net Income) / Previous Year Net Income × 100
+  \
 3. **Assets Growth (%)**:  
-   \[
-   \text{Assets Growth} = \frac{(\text{Current Year Assets} - \text{Previous Year Assets})}{\text{Previous Year Assets}} \times 100
-   \]
+   \
+   Assets Growth = (Current Year Assets−Previous Year Assets) / Previous Year Assets × 100
+   \
 
-4. **Liabilities Change (%)**:  
-   \[
-   \text{Liabilities Change} = \frac{(\text{Current Year Liabilities} - \text{Previous Year Liabilities})}{\text{Previous Year Liabilities}} \times 100
-   \]
+4. **Liabilities Change (%)**:
+   \
+   Liabilities Change = (Current Year Liabilities−Previous Year Liabilities) / Previous Year Liabilities × 100 
+   \
 
 ---
 
